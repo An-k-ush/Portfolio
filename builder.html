@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankush | Drag-and-Drop Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">An-k-ush.dev</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="builder.html" aria-current="page">Page Builder</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>Drag-and-Drop Page Builder</h1>
+      <p class="muted">Drag components from the left panel into your canvas. Content is auto-saved in local storage.</p>
+
+      <div class="builder-layout">
+        <aside class="builder-panel">
+          <h2>Components</h2>
+          <button class="block-btn" draggable="true" data-type="heading">Heading</button>
+          <button class="block-btn" draggable="true" data-type="paragraph">Paragraph</button>
+          <button class="block-btn" draggable="true" data-type="image">Image</button>
+          <button class="block-btn" draggable="true" data-type="button">Button</button>
+          <button class="block-btn" draggable="true" data-type="divider">Divider</button>
+          <button id="clearCanvas" class="btn danger">Clear Canvas</button>
+        </aside>
+
+        <section class="builder-canvas-wrap">
+          <h2>Your Page Canvas</h2>
+          <div id="dropZone" class="builder-canvas" aria-label="Page builder canvas"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="builder.js"></script>
+</body>
+</html>
